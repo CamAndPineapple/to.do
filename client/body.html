@@ -1,18 +1,26 @@
-<head>
-	<title>Todo App</title>
 
-	<!-- Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-
-</head>
 
 <body>
+
+<!-- HEADER CONTAINER -->
+
 	<div class="header-container">
-	<h1 class= "page-title">TO.DO</h1>
-	</div>
+		<h1 class= "page-title">TO.DO</h1>		
+		<h2 id="login-button">{{> loginButtons}}</h2>
+	</div> <!-- end header container -->
+
+<!-- LIST CONTAINER -->
 	<div class="list-container">
 		<header>
 			<h1 class = "list-title">Let's Do This</h1>
+
+			<!-- hide completed tasks -->
+			<label class="hide-completed">
+				<input type="checkbox" checked="{{hideCompleted}}" />
+				Hide Completed Tasks
+			</label>
+
+
 
 			<!-- Add new tasks -->
 			<form class="new-task">
@@ -25,12 +33,13 @@
 			{{#each tasks}}
 				{{> task}}
 			{{/each}}
+			<p class="completed-text"> Completed: ({{completedCount}})</p>
 		</ul>
-	</div> <!-- end container -->
-	<div class="right-sidebar">
-		<div class="loginButtons">{{> loginButtons}}</div>
-	</div>
+	</div> <!-- end list container -->
+
 </body>
+
+
 
 <template name="task">
 	<li class="{{#if checked}}checked{{/if}}">
@@ -41,5 +50,3 @@
 		<span class="text">{{text}}</span>
 	</li>
 </template>
-
-
