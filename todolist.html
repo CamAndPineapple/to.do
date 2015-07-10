@@ -1,0 +1,42 @@
+<head>
+	<title>Todo App</title>
+
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<h1 class = "title">T O.D O</h1>
+
+			<!-- Add new tasks -->
+			<form class="new-task">
+				<input type="text" name="text" placeholder="Type to add new tasks" />
+			</form>
+
+		</header>
+
+		<ul>
+			{{#each tasks}}
+				{{> task}}
+			{{/each}}
+		</ul>
+	</div> <!-- end container -->
+	<div class="right-sidebar">
+		<div class="loginButtons">{{> loginButtons}}</div>
+	</div>
+</body>
+
+<template name="task">
+	<li class="{{#if checked}}checked{{/if}}">
+		<button class="delete">&times;</button>
+
+		<input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+		<span class="text">{{text}}</span>
+	</li>
+</template>
+
+
