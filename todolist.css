@@ -17,7 +17,19 @@ body {
   font-size: 14px;
 }
 
-.container {
+.header-container {
+
+}
+  
+  .page-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  letter-spacing: 6px;
+  color: #FF6C6C;
+  }
+
+.list-container {
   max-width: 600px;
   margin: 0 auto;
   min-height: 100%;
@@ -128,7 +140,9 @@ header .hide-completed {
 
 /* Custom */
 
-.title {
+
+
+.list-title {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: 33px;
