@@ -5,10 +5,7 @@
       var text = event.target.text.value;
 
 
-      Tasks.insert({
-        text: text,
-        createdAt: new Date()
-      });
+     Meteor.call("addTask", text); 
 
       // clear form 
       event.target.text.value = "";
@@ -22,9 +19,10 @@
       Session.set("hideCompleted", event.target.checked);
     },
 
-    "click #login-button": function() {
+/*    "click #login-button": function(event) {
       $(".list-container").toggleClass('hidden');
     }
+    */
 
 
   });
@@ -32,15 +30,12 @@
   Template.task.events({
     "click .toggle-checked": function() {
       // set the checked property to the opposite of its current value
-      Tasks.update(this._id, {
-        $set: {
-          checked: !this.checked
-        }
-      });
+      Meteor.call("setChecked", this._id, ! this.checked);
     },
 
     "click .delete": function() {
-      Tasks.remove(this._id);
+      Meteor.call("deleteTask", this._id);
     }
 
   });
+

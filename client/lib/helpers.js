@@ -18,3 +18,7 @@
     }
   });
 
+ // Sign in with username instead of password
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
