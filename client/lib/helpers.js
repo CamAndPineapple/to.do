@@ -1,3 +1,7 @@
+// Subscribe to tasks
+Meteor.subscribe("tasks");
+
+
  Template.body.helpers({
     tasks: function() {
     	if (Session.get("hideCompleted")) {
@@ -18,7 +22,14 @@
     }
   });
 
- // Sign in with username instead of password
-  Accounts.ui.config({
-    passwordSignupFields: "USERNAME_ONLY"
+
+
+  // check if current user is task owner
+  Template.task.helpers({
+    isOwner: function() {
+        return this.owner === Meteor.userId();
+    }
   });
+
+
+
