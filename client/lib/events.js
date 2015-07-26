@@ -19,16 +19,34 @@
     },
 
     "click #login-button": function(event) {
-          $("#list-container").toggleClass('hidden');
-          $('#login-form').toggleClass('hidden');
+      if (!$('#list-container').is(":visible") && !$('#signup-form').is(":visible")) {
+        $('#list-container').fadeIn('fast');
+        $('#login-form').fadeOut('fast');
+      } else if ($('#signup-form').is(":visible")) {
+        $('#signup-form').fadeOut('fast');
+        $('#login-form').fadeIn('fast');
+      } else {
+        $("#list-container").fadeOut('fast');
+        $('#login-form').fadeIn('fast');
+        $('#signup-form').fadeOut('fast');
+      }
     },
 
-     "click #signup-button": function(event) {
-          $("#list-container").toggleClass('hidden');
-          $('#signup-form').toggleClass('hidden');
+    "click #signup-button": function(event) {
+       if (!$('#list-container').is(":visible") && !$('#login-form').is(":visible")) {
+        $('#list-container').fadeIn('fast');
+        $('#signup-form').fadeOut('fast');
+      } else if ($('#login-form').is(":visible")) {
+        $('#login-form').fadeOut('fast');
+        $('#signup-form').fadeIn('fast');
+      } else {
+        $("#list-container").fadeOut('fast');
+        $('#signup-form').fadeIn('fast');
+        $('#login-form').fadeOut('fast');
+      }
     },
 
-        
+
 
   });
 
@@ -42,10 +60,8 @@
       Meteor.call("deleteTask", this._id);
     },
 
-      "click .toggle-private": function() {
+    "click .toggle-private": function() {
       Meteor.call("setPrivate", this._id, !this.private);
     }
 
   });
-
-  
