@@ -1,0 +1,42 @@
+.form-input {
+	margin: 0 auto;
+	margin-top: 1px;
+	padding: 12px;
+	width: 50%;
+	border: 1px solid #DFE7F1;
+	border-radius: 0;
+	border-collapse: collapse;
+
+
+}
+
+.form-submit {
+	margin-top: 8px;
+	padding: 12px;
+	border-radius: 0px;
+	width: 50%;
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 2px;
+	color: #fff;
+	background-color: #70E3CE;
+}
+
+	.form-submit:hover {
+		color: #fff;
+		border-color: #70E3CE;
+		background-color: #3E7EDE;
+	}
+
+#login-form {
+	max-width: 600px;
+	margin: 0px auto;
+	min-height: 600px;
+	background: #FFF none repeat scroll 0% 0%;
+}
+
+#signup-form {
+	max-width: 600px;
+	margin: 0px auto;
+	min-height: 600px;
+	background: #FFF none repeat scroll 0% 0%;
+}

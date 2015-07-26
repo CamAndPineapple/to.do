@@ -6,21 +6,21 @@
 
 	<div class="header-container">
 		<h1 class= "page-title">TO.DO</h1>
-		<button id="login-button" class="btn btn-default user-button" type="button">Login</button>
-		<button id="signup-button" class="btn btn-default user-button" type="button">Sign in</button>
+		<button id="login-button" class="btn btn-default user-button" type="button">LOGIN</button>
+		<button id="signup-button" class="btn btn-default user-button" type="button">SIGN UP</button>
 		 {{#if currentUser}}
         {{> dashboard}}
     {{else}}
 	    <form id="login-form" class="hidden">
 	    <header>
-	    <h1 class="list-title"> Log In </h1>
+	    <h1 class="list-title"> Login </h1>
 	    </header>
 	        {{> login}}
 	    </form>
 
 		<form id="signup-form" class="hidden">
 		<header>
-		<h1 class="list-title"> Sign Up </h1>
+		<h1 class="list-title"> Sign up </h1>
 		</header>
 		{{> register}}
 		</form>
@@ -92,18 +92,20 @@
     <p><a href="#" class="logout">Logout</a></p>
 </template>
 
-<template name="register">
+<template name="login">
     <form>
-        <input type="email" name="registerEmail">
-        <input type="password" name="registerPassword">
-        <input type="submit" value="Register">
+    <div class="form-group">
+        <input class="form-input" type="email" name="loginEmail" value="email">
+        <input class="form-input" type="text" name="loginPassword" value="password">
+        <button class="btn btn-default form-submit" value="login">LOGIN</button>
+    </div>
     </form>
 </template>
 
-<template name="login">
+<template name="register">
     <form>
-        <input type="email" name="loginEmail">
-        <input type="password" name="loginPassword">
-        <input type="submit" value="Login">
+        <input class="form-input" type="email" name="registerEmail">
+        <input class="form-input" type="password" name="registerPassword">
+        <button class="btn btn-default form-submit" value="Register">SIGN UP</button>
     </form>
 </template>

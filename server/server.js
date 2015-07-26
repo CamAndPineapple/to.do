@@ -1,4 +1,4 @@
-console.log("Server check - Running");
+console.log("Grab a cup of coffee and enjoy");
 
 // Publish all tasks to server
 Meteor.publish("tasks", function () {

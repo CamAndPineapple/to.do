@@ -1,5 +1,6 @@
 .header-container {
-  text-align: center;
+	text-align: center;
+	margin-top: 30px;
 }
 
 	.page-title {
@@ -12,33 +13,25 @@
 		color: #FF6C6C;
 	}
 
-#login-form {
-	max-width: 600px;
-	margin: 0px auto;
-	min-height: 600px;
-	background: #FFF none repeat scroll 0% 0%;
-}
-
-#signup-form {
-	max-width: 600px;
-	margin: 0px auto;
-	min-height: 600px;
-	background: #FFF none repeat scroll 0% 0%;
-}
-
 .user-button {
 	display: inline;
 	margin: 0px auto;
 	margin-top: 30px;
 	margin-bottom: 30px;
-	border-color: #FF6C6C;
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+	letter-spacing: 3px;
+	line-height: 25px;
+	border-color: #3E7EDE;
 	border-radius: 0;
 	background-color: transparent;
 	color: #FF6C6C;
 }
 	
 	.user-button:hover {
-		background-color: #FF6C6C;
+		background-color: #3E7EDE;
 		color: white;
-		border-color: #FF6C6C;
+		border-color: #3E7EDE;
 	}
+
+
